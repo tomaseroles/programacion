@@ -11,8 +11,12 @@ package practica2;
  */
 public class miOrdenador {
     public static void main(String[] args){
-        COrdenador miord;
+        COrdenador miord = new COrdenador();
         
+        miord.marca="IBM";
+        miord.modelo="Thinkpad";
+        
+        miord.Encender();
         
     }
 }

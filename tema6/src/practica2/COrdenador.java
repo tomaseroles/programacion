@@ -10,7 +10,7 @@ package practica2;
  * @author tomfor
  */
 public class COrdenador {
-    static String marca;
+    String marca;
     static String modelo;
     
     static boolean OrdenadorEncendido;
@@ -32,8 +32,13 @@ public class COrdenador {
         pantalla=true;
     }
     
+    public static void setMarca(String nMarca){
+        //marca = nMarca;
+    }
+    
+    
     public static void Estado(){
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
+        //System.out.println("Marca: " + marca);
+        //System.out.println("Modelo: " + modelo);
     }
 }
