@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package practica2;
+import java.util.Scanner;
 
 /**
  *
@@ -11,12 +12,19 @@ package practica2;
  */
 public class miOrdenador {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
         COrdenador miord = new COrdenador();
         
-        miord.marca="IBM";
-        miord.modelo="Thinkpad";
+        System.out.println("Marca: ");
+        miord.setMarca(sc.nextLine());
+        System.out.println("Modelo: ");
+        miord.setModelo(sc.nextLine());
+        System.out.println("Procesador");
+        miord.setProces(sc.nextLine());
         
+        miord.Estado();
         miord.Encender();
+        miord.Estado();
         
     }
 }
