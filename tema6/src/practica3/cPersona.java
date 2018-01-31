@@ -47,7 +47,7 @@ public class cPersona {
         return edad;
     }
     
-    public void Presentar(){
+    public  void Presentar(){
         System.out.println("DNI: " + getDNI());
         System.out.println("Nom: " + getNom());
         System.out.println("Edad:" + getEdad());
