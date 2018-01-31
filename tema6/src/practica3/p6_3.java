@@ -10,6 +10,17 @@ package practica3;
  * @author tomfor
  */
 public class p6_3 {
-    cPersona p1 = new cPersona();
-    //cPersona p2 = new cPersona("123456","pepito",(short)23);
+    public static void main(String[] args){
+        cPersona per1 = new cPersona();
+        cPersona per2 = new cPersona("123456","pepito", 23);
+
+
+        per1.setNom("Tomas");
+        per1.setDNI("18993950K");
+        per1.setEdad(43);
+        
+        per1.Presentar();
+        per2.Presentar();
+    }
+    
 }

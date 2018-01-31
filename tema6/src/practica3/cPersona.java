@@ -10,45 +10,44 @@ package practica3;
  * @author tomfor
  */
 public class cPersona {
-    private static String dni;
-    private static String nom;
-    private static short edad;
+    private String dni;
+    private String nom;
+    private int edad;
     
-    public static void cPersona(){
-        
+    public cPersona(){
     }
     
-    public static void cPersona(String dni, String nom, short edad){
+    public cPersona(String dni, String nom, int edad){
         setDNI(dni);
         setNom(nom);
         setEdad(edad);
     }
     
-    public static void setDNI(String ndni){
+    public void setDNI(String ndni){
         dni = ndni;
     }
     
-    public static void setNom(String nombre){
+    public void setNom(String nombre){
         nom=nombre;
     }
     
-    public static void setEdad(short age){
+    public void setEdad(int age){
         edad = age;
     }
     
-    public static String getDNI(){
+    public String getDNI(){
         return dni;
     }
     
-    public static String getNom(){
+    public String getNom(){
         return nom;
     }
     
-    public static short getEdad(){
+    public int getEdad(){
         return edad;
     }
     
-    public static void Presentar(){
+    public void Presentar(){
         System.out.println("DNI: " + getDNI());
         System.out.println("Nom: " + getNom());
         System.out.println("Edad:" + getEdad());
