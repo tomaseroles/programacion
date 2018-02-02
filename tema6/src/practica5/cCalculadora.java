@@ -10,39 +10,50 @@ package practica5;
  * @author tomfor
  */
 public class cCalculadora {
-    private int pantalla;
+    private String pantalla;
+    private int v1;
+    private int v2;
     
-    public cCalculadora(){Inicializar();}
-    public cCalculadora(int Valor){pantalla = Valor;}
+    public cCalculadora(){Iniciar();}
+    public cCalculadora(int Valor){
+        pantalla = Integer.toString(Valor) ;
+    }
     
-    public void Inicializar(){ pantalla=0;}
-    public void Sumar(int numero){
-        pantalla=pantalla+numero;
-        Mostrar();
+    public void Iniciar(){ pantalla="0";}
+    public void Iniciar(int valor){
+        pantalla=Integer.toString(valor);
     }
-    public void Restar(int numero){
-        pantalla=pantalla-numero;
-        Mostrar();
+    public String Valor(){
+        return pantalla;
     }
-    public void Multiplicar(int numero){
-        pantalla=pantalla*numero;
-        Mostrar();
+    public void Sumar(){
+        pantalla="Suma: \t\t" + Integer.toString(v1+v2);
     }
-    public void Dividir(int numero){
-        pantalla=pantalla/numero;
-        Mostrar();
+    public void Restar(){
+        pantalla="Resta:\t\t" + Integer.toString(v1-v2);
+    }
+    public void Multiplicar(){
+        pantalla="Producto:\t\t"+ Integer.toString(v1*v2);
+    }
+    public void Dividir(){
+        pantalla="Cociente:\t\t" + Integer.toString(v1/v2);
     }
     public void Raiz(){
-        pantalla=(int)Math.sqrt((double)(pantalla));
-        Mostrar();
+        pantalla="Raiz cuadrada:\t" + Double.toString(Math.sqrt((double)(v1)));
     }
-    public void Potencia(int exponente){
-        pantalla=(int)Math.pow((double)pantalla, (double)exponente);
-        Mostrar();
+    public void Potencia(){
+        pantalla="Potencia:\t\t"+ Integer.toString((int)Math.pow((double)v1, (double)v2));
     }
     public void Mostrar(){
-        System.out.println("Pantalla:\t\t\t\t" + pantalla);
+        System.out.println("" + pantalla);
     }
     
+    public void set1(int valor){
+        v1=valor;
+    }
+    
+    public void set2(int valor){
+        v2=valor;
+    }
 }
 
