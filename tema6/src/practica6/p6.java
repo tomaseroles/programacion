@@ -43,6 +43,7 @@ public class p6 {
         		c.activa=true;
         	}
         }while(opcion!=6);
+        sc.close();
     }
     
     private static int Menu(){
