@@ -15,30 +15,34 @@ public class p6 {
         Scanner sc = new Scanner(System.in);
         cuenta c = new cuenta();
         int opcion=0;
+        float valor=0;
+        
         do{
-            opcion=Menu();
-            
-            
-            if(opcion<2){
-                if(c.activa){
-                    System.out.println("No se puede crear la cuenta, ya esta creada.");
-                } else{
-                    System.out.print("Introduzca el saldo inicial:");
-                    c.Ingresar(sc.nextFloat());
-                }
-            } else{
-                if(c.activa){
-                    if (opcion==3){
-                        System.out.println("Cantidad a ingresar:");
-                        c.Ingresar(sc.nextFloat());
-                    } else if(opcion==4){
-                        System.out.println("Cantidad a retirar:");
-                        c.Extraer(sc.nextFloat());
-                    }
-                }
-            }
-        } while(opcion!=6);
-        sc.close();
+        	opcion=Menu();
+        	if (c.activa && opcion>2){		//se puede acceder a la cuenta para hacer operaciones
+        		if(opcion==3){					//añadir dinero
+        			System.out.print("Introduce la cantidad a ingresar:");
+        			c.Ingresar(sc.nextFloat());
+        			System.out.println("");
+        		} else if(opcion==4){			//sacar dinero
+        			System.out.print("Introduce la cantidad a retirar: ");
+        			valor = sc.nextFloat();
+        			if (c.getSaldo()<valor){
+        				System.out.println("No se puede sacar " + valor + ". No hay dinero suficiente.");
+        			} else{
+        				c.Extraer(valor);
+        			}
+        			System.out.println("El saldo disponible es: " + c.getSaldo());
+        		} else if(opcion==5)
+        			System.out.println("El saldo de la cuenta es: " + c.getSaldo());
+        	} else{				//no se puede hacer operaciones, hay que asignar un saldo inicial
+        		System.out.println("No se puede realizar esta operación.\nLa cuenta no tiene saldo inicial.");
+        		System.out.print("Asigne un saldo inicial a la cuenta: ");
+        		c.Ingresar(sc.nextFloat());
+    			System.out.println("");
+        		c.activa=true;
+        	}
+        }while(opcion!=6);
     }
     
     private static int Menu(){
