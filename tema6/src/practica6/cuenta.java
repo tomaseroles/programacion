@@ -11,8 +11,9 @@ import java.util.Scanner;
  * @author tomfor
  */
 public class cuenta {
-    private float Saldo;
-    boolean activa;
+    private float Saldo;		//indica el saldo de la cuenta en cada momento
+    boolean activa;				//indica si la cuenta está activa o no. Cuando se crea con el constructor por defecto no está activa
+    
     cuenta(float sini) {
         activa=true;
         Saldo = sini;
