@@ -8,16 +8,25 @@ public class pelicula extends multimedia {
 		
 	}
 	
-	public pelicula(String actor, String actriz){
-		this.actor=actor;
-		this.actriz=actriz;
+	public pelicula(multimedia m, String actor, String actriz){
+            super(m.getTitulo(), m.getAutor(), m.getFormato(),m.getDuracion());
+            if(actor==null && actriz==null){
+                System.out.println("No se puede dar de alta la pelicula.\nSe tiene que indicar al menos un parametro");
+            } else{
+                this.actor=actor;
+                this.actriz=actriz;
+            }
 	}
-	
-	public pelicula(String actor, int b){
-		this.actor=actor;
-	}
-	
-	public pelicula(String actriz){
-		this.actriz=actriz;
-	}
+        
+        @Override public String toString(){
+            return super.toString() + " Reparto: " + this.actor + "/" + this.actriz;
+        }
+        
+        public void setActor(String actor){
+            this.actor=actor;
+        }
+        
+        public void setActriz(String actriz){
+            this.actriz=actriz;
+        }
 }
