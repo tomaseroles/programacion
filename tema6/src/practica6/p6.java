@@ -14,7 +14,7 @@ public class p6 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         cuenta c = new cuenta();
-        cuenta c1 = new cuenta(1500);
+        
         int opcion=0;
         float valor=0;
         
