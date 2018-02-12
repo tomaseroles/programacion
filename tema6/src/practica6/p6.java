@@ -14,34 +14,35 @@ public class p6 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         cuenta c = new cuenta();
+        cuenta c1 = new cuenta(1500);
         int opcion=0;
         float valor=0;
         
         do{
-        	opcion=Menu();
-        	if (c.activa && opcion>2){		//se puede acceder a la cuenta para hacer operaciones
-        		if(opcion==3){					//añadir dinero
-        			System.out.print("Introduce la cantidad a ingresar:");
-        			c.Ingresar(sc.nextFloat());
-        			System.out.println("");
-        		} else if(opcion==4){			//sacar dinero
-        			System.out.print("Introduce la cantidad a retirar: ");
-        			valor = sc.nextFloat();
-        			if (c.getSaldo()<valor){
-        				System.out.println("No se puede sacar " + valor + ". No hay dinero suficiente.");
-        			} else{
-        				c.Extraer(valor);
-        			}
-        			System.out.println("El saldo disponible es: " + c.getSaldo());
-        		} else if(opcion==5)
-        			System.out.println("El saldo de la cuenta es: " + c.getSaldo());
-        	} else{				//no se puede hacer operaciones, hay que asignar un saldo inicial
-        		System.out.println("No se puede realizar esta operación.\nLa cuenta no tiene saldo inicial.");
-        		System.out.print("Asigne un saldo inicial a la cuenta: ");
-        		c.Ingresar(sc.nextFloat());
-    			System.out.println("");
-        		c.activa=true;
-        	}
+            opcion=Menu();
+            if (c.activa && opcion>2){		//se puede acceder a la cuenta para hacer operaciones
+                if(opcion==3){					//aï¿½adir dinero
+                    System.out.print("Introduce la cantidad a ingresar:");
+                    c.Ingresar(sc.nextFloat());
+                    System.out.println("");
+                } else if(opcion==4){			//sacar dinero
+                    System.out.print("Introduce la cantidad a retirar: ");
+                    valor = sc.nextFloat();
+                    if (c.getSaldo()<valor){
+                        System.out.println("No se puede sacar " + valor + ". No hay dinero suficiente.");
+                    } else{
+                        c.Extraer(valor);
+                    }
+                    System.out.println("El saldo disponible es: " + c.getSaldo());
+                } else if(opcion==5)
+                    System.out.println("El saldo de la cuenta es: " + c.getSaldo());
+            } else{				//no se puede hacer operaciones, hay que asignar un saldo inicial
+                System.out.println("No se puede realizar esta operaciï¿½n.\nLa cuenta no tiene saldo inicial.");
+                System.out.print("Asigne un saldo inicial a la cuenta: ");
+                c.Ingresar(sc.nextFloat());
+                System.out.println("");
+                c.activa=true;
+            }
         }while(opcion!=6);
         sc.close();
     }

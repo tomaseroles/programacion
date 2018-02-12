@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class cuenta {
     private float Saldo;		//indica el saldo de la cuenta en cada momento
-    boolean activa;				//indica si la cuenta está activa o no. Cuando se crea con el constructor por defecto no está activa
+    boolean activa;				//indica si la cuenta estï¿½ activa o no. Cuando se crea con el constructor por defecto no estï¿½ activa
     
     cuenta(float sini) {
         activa=true;
@@ -24,8 +24,8 @@ public class cuenta {
         Saldo=0;
     }
     
-    void Ingresar(float c){
-        Saldo=Saldo+c;
+    void Ingresar(float valor){
+        Saldo=Saldo+valor;
     }
     
     void Extraer(float c){
