@@ -14,12 +14,21 @@ import java.util.Scanner;
  */
 public class p9 {
     public static void main(String[] args){
-        CuentaClave cta = new CuentaClave(1000,"miclave");
+        Scanner sc = new Scanner(System.in);
+        CuentaClave cta = new CuentaClave(0,"miclave");
         int opcion = Menu();
         do{
-            if(opcion==4){
-                
-            }
+            if(opcion==3 || opcion==4){
+                System.out.println("Introduce la cantidad: ");
+                if(opcion==3)
+                    cta.Ingresar(sc.nextFloat());
+                else
+                    cta.Extraer(sc.nextFloat());
+            } else if(opcion==1 || opcion==2){
+                if(!cta.getStatus())
+                    System.out.println("La cuenta no esta activa. No se puede realizar la operacion.");
+            } else if(opcion==5)
+                System.out.println(cta.getSaldo());
             opcion=Menu();
         }while(opcion!=6);
         

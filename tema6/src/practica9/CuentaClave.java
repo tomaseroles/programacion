@@ -30,4 +30,8 @@ public class CuentaClave extends practica6.cuenta{
     @Override public void Ingresar(float cantidad){
         super.Ingresar(cantidad);
     }
+    
+    @Override public float getSaldo(){
+        return super.getSaldo();
+    }
 }
