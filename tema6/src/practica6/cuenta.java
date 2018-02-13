@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package practica6;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
@@ -34,5 +34,14 @@ public class cuenta {
     
     public float getSaldo(){
         return Saldo;
+    }
+    
+    //metodos añadidos por la practica 9
+    public boolean getStatus(){
+        return activa;
+    }
+    
+    public void Activar(){
+        activa=true;
     }
 }
