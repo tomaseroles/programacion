@@ -25,7 +25,7 @@ public class profesor {
     }
     
     public String toString(){
-    	return "Nombre: " + this.nombre + ". Edad: " + this.edad + ". A.Consol.: " + this.consolidados + ". Salario Base: " + SalarioBase();
+    	return "Nombre: " + this.nombre + ". Edad: " + this.edad + ". A.Cons.: " + this.consolidados + ". Salario Base: " + SalarioBase();
     }
     
     public double SalarioBase(){

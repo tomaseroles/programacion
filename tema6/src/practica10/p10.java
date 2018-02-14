@@ -14,19 +14,24 @@ import java.util.Scanner;
 public class p10 {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Profesor 1:");
         profesor p1 = new profesor();
         p1.setNombre();
         p1.setEdad();
         p1.setConsolidados();
         
         System.out.println(p1.toString());
-        
-        emerito p2 = new emerito();
-        p2.setNombre();
-        p2.setEdad();
-        p2.setConsolidados();
-        
+
+        System.out.println("Profesor 2:");
+        profesor p2 = new profesor("Juan", 25, 15);
         System.out.println(p2.toString());
+        
+        emerito p3 = new emerito();
+        p3.setProfe(p2);
+        p3.setAE();
+        
+        System.out.println(p3.toString());
         sc.close();
         
     }

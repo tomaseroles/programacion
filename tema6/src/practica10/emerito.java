@@ -22,8 +22,12 @@ public class emerito extends profesor {
         this.aEmerito=ae;
     }
     
+    public void setProfe(profesor p){
+        this.profe=p;
+    }
+    
     public void setAE(){
-    	System.out.println("Años emerito: ");
+    	System.out.println("AÃ±os emerito: ");
     	this.aEmerito=sc.nextInt();
     }
     
@@ -40,7 +44,7 @@ public class emerito extends profesor {
     }
     
     @Override public String toString(){
-    	return super.toString()+". Años Em.: " + getAnhos() + ". Salario: " + SalarioBase();
+    	return super.toString()+". AÃ±os Em.: " + getAnhos() + ". Salario: " + this.SalarioBase();
     }
 }
 
