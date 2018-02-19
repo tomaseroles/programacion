@@ -7,10 +7,6 @@ package practica10;
 
 import java.util.Scanner;
 
-/**
- *
- * @author tomfor
- */
 public class profesor {
     Scanner sc = new Scanner(System.in);
     
@@ -18,40 +14,48 @@ public class profesor {
     private int edad;
     private int consolidados;
     
-    public void profesor(){
+    public profesor(){
         
     }
     
-    public void profesor(String n, int e, int c){
+    public profesor(String n, int e, int c){
         this.nombre=n;
         this.edad=e;
         this.consolidados=c;
+    }
+    
+    public String toString(){
+    	return "Nombre: " + this.nombre + ". Edad: " + this.edad + ". A.Cons.: " + this.consolidados + ". Salario Base: " + SalarioBase();
     }
     
     public double SalarioBase(){
         return (725+this.consolidados*33.25);
     }
     
-    @Override  public String toString(){
-        return this.nombre + ", " + this.edad + ", " + this.consolidados + ", " + SalarioBase();
-    }
-    
     public void setNombre(){
-        System.out.print("Nombre del profesor:");
-        nombre = sc.nextLine();
+    	System.out.println("Nombre del profesor: ");
+    	this.nombre=sc.nextLine();
     }
-    
-    public String getNombre(){return nombre;}
-    public int getEdad(){return edad;}
-    public int getCons(){return consolidados;}
     
     public void setEdad(){
-        System.out.print("Entra la edad: ");
-        edad = sc.nextInt();
+    	System.out.println("Edad del profesor: ");
+    	this.edad = sc.nextInt();
     }
     
-    public void setCons(){
-        System.out.print("Años consolidados: ");
-        consolidados = sc.nextInt();
+    public void setConsolidados(){
+    	System.out.println("Consolidados?: ");
+    	this.consolidados=sc.nextInt();
+    }
+    
+    public int getConsolidados(){
+    	return this.consolidados;
+    }
+    
+    public int getEdad(){
+    	return this.edad;
+    }
+    
+    public String getNombre(){
+    	return this.nombre;
     }
 }
