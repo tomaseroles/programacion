@@ -43,6 +43,11 @@ public class emerito extends profesor {
     	return this.aEmerito;
     }
     
+    public void setAnEm(){
+        System.out.print("Años emerito: ");
+        aEmerito=sc.nextInt();
+    }
+    
     @Override public String toString(){
     	return super.toString()+". Años Em.: " + getAnhos() + ". Salario: " + this.SalarioBase();
     }

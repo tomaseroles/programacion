@@ -14,7 +14,7 @@ public class p10 {
         
         p.setNombre();
         p.setEdad();
-        p.setCons();
+        p.setConsolidados();
         System.out.println(p.toString());
         
         
@@ -22,7 +22,7 @@ public class p10 {
         
         q.setNombre();
         q.setEdad();
-        q.setCons();
+        q.setConsolidados();
         q.setAnEm();
         
         System.out.print(q.toString());
