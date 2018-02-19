@@ -63,10 +63,7 @@ public class persona {
     }
     
     public boolean mayorEdad(){
-        if (this.edad>=18)
-            return true;
-        else
-            return false;
+        return (this.edad>=18);
     }
     
     @Override public String toString(){
