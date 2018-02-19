@@ -23,5 +23,14 @@ public class emerito extends profesor {
     @Override public double SalarioBase(){
         return super.SalarioBase()+47.80*this.aEmerito;
     }
+    
+    @Override public String toString(){
+        return super.toString() + "--" + aEmerito + SalarioBase();
+    }
+    
+    public void setAnEm(){
+        System.out.print("Años emerito: ");
+        aEmerito=sc.nextInt();
+    }
 }
 
