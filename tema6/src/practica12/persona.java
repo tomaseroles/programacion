@@ -18,30 +18,32 @@ public class persona {
     int altura;
     String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
     
-    void persona(){
+    public persona(){
         nombre = "Nombre";
         edad = 0;
         sexo = 'H';
         peso=0;
         altura=0;
+        this.DNI=generaDNI();
     }
     
-    void persona(String nombre, int edad, char sexo){
+    persona(String nombre, int edad, char sexo){
         this.nombre=nombre;
         this.edad=edad;
         this.sexo=sexo;
+        this.DNI=generaDNI();
     }
     
-    void persona(String nombre, int edad, String dni, char sexo, double peso, int altura){
+    persona(String nombre, int edad, char sexo, double peso, int altura){
         this.nombre=nombre;
         this.edad = edad;
-        this.DNI=dni;
+        this.DNI=generaDNI();
         this.sexo=sexo;
         this.peso=peso;
         this.altura=altura;
     }
     
-    public double calcularIMC(){
+	public double calcularIMC(){
         double imc;
         imc = getPeso()/getAltura()*getAltura();
         if(imc<20)

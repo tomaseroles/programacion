@@ -15,45 +15,31 @@ public class p12 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String nombre;
+        int edad;
+        String sSexo;
         char sexo;
         double peso;
         int altura;
         
         System.out.print("Nombre: ");
         nombre = sc.nextLine();
+        System.out.print("Edad: ");
+        edad=sc.nextInt();
         System.out.print("Sexo: ");
-        sexo = sc.nextLine().charAt(0);
+        sSexo = sc.nextLine();
+        sexo = sSexo.charAt(1);
         System.out.print("Peso: ");
         peso = sc.nextDouble();
         System.out.print("Altura: ");
         altura = sc.nextInt();
         
+        persona p1 = new persona();
+        persona p2 = new persona(nombre,edad,sexo);
+        persona p3 = new persona(nombre, edad, sexo, peso, altura);
         
-        persona v[]= new persona[3];
-        
-        v[0]=new persona();
-        v[0].setNombre(nombre);
-        v[0].setSexo(sexo);
-        v[0].setPeso(peso);
-        v[0].setAltura(altura);
-        
-        v[1]=new persona();
-        v[1].setNombre(nombre);
-        v[1].setSexo(sexo);
-        v[1].getPeso();
-        v[1].getAltura();
-        
-        v[2]=new persona();
-        v[2].getNombre();
-        v[2].getSexo();
-        v[2].getPeso();
-        v[2].getAltura();
-        
-        
-        v[0].toString();
-        v[1].toString();
-        v[2].toString();
-        
+        System.out.println(p1.toString());
+        System.out.println(p2.toString());
+        System.out.println(p3.toString());
         
     }
 }
