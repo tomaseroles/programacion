@@ -21,6 +21,23 @@ public class p12 {
         double peso;
         int altura;
         
+        System.out.println("Persona 1:");
+        persona p1 = new persona();
+
+        System.out.println("Persona 2:");
+        System.out.print("Nombre: ");
+        nombre = sc.nextLine();
+        System.out.print("Edad: ");
+        edad=sc.nextInt();
+        System.out.print("Sexo: ");
+        sSexo = sc.nextLine();
+        sSexo = sc.nextLine();
+        sexo = sSexo.charAt(0);
+        System.out.println();
+
+        persona p2 = new persona(nombre,edad,sexo);
+
+        System.out.println("Persona 3:");
         System.out.print("Nombre: ");
         nombre = sc.nextLine();
         System.out.print("Edad: ");
@@ -33,9 +50,8 @@ public class p12 {
         peso = sc.nextDouble();
         System.out.print("Altura: ");
         altura = sc.nextInt();
+        System.out.println();
         
-        persona p1 = new persona();
-        persona p2 = new persona(nombre,edad,sexo);
         persona p3 = new persona(nombre, edad, sexo, peso, altura);
         
         System.out.println(p1.toString());

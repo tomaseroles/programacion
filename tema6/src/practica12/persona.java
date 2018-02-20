@@ -24,8 +24,8 @@ public class persona {
         nombre = "Nombre";
         edad = 0;
         sexo = 'H';
-        peso=0;
-        altura=0;
+        peso=90;
+        altura=175;
         generaDNI();
     }
     
@@ -33,6 +33,8 @@ public class persona {
         this.nombre=nombre;
         this.edad=edad;
         this.sexo=sexo;
+        this.peso = 90;
+        this.altura = 175;
         generaDNI();
     }
     
@@ -75,6 +77,7 @@ public class persona {
         salida+= "Sexo:       " + getSexo() + "\n";
         salida+= "Peso(kg):   " + getPeso() + "\n";
         salida+= "Altura(cm): " + getAltura() + "\n";
+        salida+= "IMC:        " + calcularIMC();
         return salida;
     }
     
