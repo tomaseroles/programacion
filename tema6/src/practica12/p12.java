@@ -27,6 +27,7 @@ public class p12 {
         edad=sc.nextInt();
         System.out.print("Sexo: ");
         sSexo = sc.nextLine();
+        sSexo = sc.nextLine();
         sexo = sSexo.charAt(0);
         System.out.print("Peso: ");
         peso = sc.nextDouble();

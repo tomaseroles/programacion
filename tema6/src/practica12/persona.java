@@ -5,6 +5,8 @@
  */
 package practica12;
 
+import java.util.Random;
+
 /**
  *
  * @author tomfor
@@ -24,23 +26,23 @@ public class persona {
         sexo = 'H';
         peso=0;
         altura=0;
-        this.DNI=generaDNI();
+        generaDNI();
     }
     
     persona(String nombre, int edad, char sexo){
         this.nombre=nombre;
         this.edad=edad;
         this.sexo=sexo;
-        this.DNI=generaDNI();
+        generaDNI();
     }
     
     persona(String nombre, int edad, char sexo, double peso, int altura){
         this.nombre=nombre;
         this.edad = edad;
-        this.DNI=generaDNI();
         this.sexo=sexo;
         this.peso=peso;
         this.altura=altura;
+        generaDNI();
     }
     
 	public double calcularIMC(){
@@ -54,14 +56,10 @@ public class persona {
             return 1;
     }
     
-    public String generaDNI(){
-        int ndni;
-        char letra;
-        
-        ndni = (int)Math.random()*100000000;
-        letra = letras.charAt(ndni/23);
-        
-        return Long.toString(ndni)+letra;
+    public void generaDNI(){
+        Random rnd = new Random();
+        int ale = rnd.nextInt(99999999-00000000);
+        DNI=Integer.toString(ale)+letras.charAt(ale%23);
     }
     
     public boolean mayorEdad(){
@@ -70,13 +68,13 @@ public class persona {
     
     @Override public String toString(){
         String salida;
-        salida = "Ficha completa:";
-        salida+= "Nombre:     " + getNombre();
-        salida+= "Edad:       " + getEdad();
-        salida+= "DNI:        " + getDNI();
-        salida+= "Sexo:       " + getSexo();
-        salida+= "Peso(kg):   " + getPeso();
-        salida+= "Altura(cm): " + getAltura();
+        salida = "Ficha completa:\n";
+        salida+= "Nombre:     " + getNombre() + "\n";
+        salida+= "Edad:       " + getEdad() + "\n";
+        salida+= "DNI:        " + getDNI() + "\n";
+        salida+= "Sexo:       " + getSexo() + "\n";
+        salida+= "Peso(kg):   " + getPeso() + "\n";
+        salida+= "Altura(cm): " + getAltura() + "\n";
         return salida;
     }
     
